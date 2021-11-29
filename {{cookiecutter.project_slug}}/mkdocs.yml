@@ -1,7 +1,7 @@
 site_name: {{ cookiecutter.project_name }}
-site_url: https://{{ cookiecutter.github_username }}.github.io/{{ cookiecutter.project_slug }}
-repo_url: https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}
-repo_name: {{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}
+site_url: https://{{ cookiecutter.gitlab_groupname_or_username }}.{{ cookiecutter.gitlab_pages_domain }}/{{ cookiecutter.project_slug }}
+repo_url: {{ cookiecutter.gitlab_urlbase }}/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}
+repo_name: {{ cookiecutter.gitlab_groupname_or_username }}/{{ cookiecutter.project_slug }}
 #strict: true
 nav:
   - Home: index.md
@@ -54,17 +54,6 @@ plugins:
         - {{ cookiecutter.project_slug }}
 extra:
   social:
-    - icon: fontawesome/brands/twitter
-      # replace with your own tweet link below
-      link: https://github.com/waynerv/cookiecutter-pypackage
-      name: Tweet
-    - icon: fontawesome/brands/facebook
-      # replace with your own facebook link below
-      link: https://github.com/waynerv/cookiecutter-pypackage
-      name: Facebook
-    - icon: fontawesome/brands/github
-      link: https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}
-      name: Github
     - icon: material/email
       link: "mailto:{{ cookiecutter.email }}"
   # to enable disqus, uncomment the following and put your disqus id below

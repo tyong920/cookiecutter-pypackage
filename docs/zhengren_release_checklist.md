@@ -1,15 +1,18 @@
-# PyPI Release Checklist
+# Release Checklist
 
 ## Before Your First Release
+ZhengRen does not have a Python package warehouse like Pypi yet.
+We do not assume the target you are going to deploy for now.
+But release tarballs using Gitlab release is a commonly accpeted way.
 
-You better visit PyPI to make sure your package name is unused.
+You better make sure your package name is unused.
 
 ## For Every Release
 
 0.  Make some pull requests, merge all changes from feature branch to master/main.
 
 1.  Update CHANGELOG.md manually. Make sure it follows the [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) standard.
-    Be noticed that GitHub workflow will read changelog and extract release notes automatically.
+    Be noticed that Gitlab workflow will read changelog and extract release notes automatically.
 
 2.  Commit the changelog changes:
 
@@ -44,10 +47,9 @@ You better visit PyPI to make sure your package name is unused.
     > git push --tags
     > ```
 
-    Only tag name started with 'v'(lower case) will leverage GitHub release workflow.
+    Only tag name started with 'v'(lower case) will leverage Gitlab release workflow.
 
-7.  Check the PyPI listing page to make sure that the README, release
-    notes, and roadmap display properly. If tox test passed, this should be ok, since
+7.  Take your time to do some sort of test to make sure the tarball shall work. If tox test passed, this should be ok, since
     we have already run twine check during tox test.
 
 ## About This Checklist

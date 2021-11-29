@@ -9,7 +9,7 @@ You can contribute in many ways:
 
 ### Report Bugs
 
-Report bugs at https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/issues.
+Report bugs at {{cookiecutteer.gitlab_urlbase}}/{{ cookiecutter.gitlab_groupname_or_username }}/{{ cookiecutter.project_slug }}/issues.
 
 If you are reporting a bug, please include:
 
@@ -19,12 +19,12 @@ If you are reporting a bug, please include:
 
 ### Fix Bugs
 
-Look through the GitHub issues for bugs. Anything tagged with "bug" and "help
+Look through the Gitlab issues for bugs. Anything tagged with "bug" and "help
 wanted" is open to whoever wants to implement it.
 
 ### Implement Features
 
-Look through the GitHub issues for features. Anything tagged with "enhancement"
+Look through the Gitlab issues for features. Anything tagged with "enhancement"
 and "help wanted" is open to whoever wants to implement it.
 
 ### Write Documentation
@@ -35,7 +35,7 @@ articles, and such.
 
 ### Submit Feedback
 
-The best way to send feedback is to file an issue at https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/issues.
+The best way to send feedback is to file an issue at {{cookiecutteer.gitlab_urlbase}}/{{ cookiecutter.gitlab_groupname_or_username }}/{{ cookiecutter.project_slug }}/issues.
 
 If you are proposing a feature:
 
@@ -52,7 +52,7 @@ Ready to contribute? Here's how to set up `{{ cookiecutter.project_slug }}` for 
 2. Clone your fork locally
 
     ```
-    $ git clone git@github.com:your_name_here/{{ cookiecutter.project_slug }}.git
+    $ git clone git@gitlab_host_here:your_name_here/{{ cookiecutter.project_slug }}.git
     ```
 
 3. Ensure [poetry](https://python-poetry.org/docs/) is installed.
@@ -77,7 +77,7 @@ Ready to contribute? Here's how to set up `{{ cookiecutter.project_slug }}` for 
     $ poetry run tox
     ```
 
-7. Commit your changes and push your branch to GitHub:
+7. Commit your changes and push your branch to Gitlab:
 
     ```
     $ git add .
@@ -85,18 +85,18 @@ Ready to contribute? Here's how to set up `{{ cookiecutter.project_slug }}` for 
     $ git push origin name-of-your-bugfix-or-feature
     ```
 
-8. Submit a pull request through the GitHub website.
+8. Submit a merge request through the Gitlab website.
 
-## Pull Request Guidelines
+## Merge Request Guidelines
 
-Before you submit a pull request, check that it meets these guidelines:
+Before you submit a merge request, check that it meets these guidelines:
 
-1. The pull request should include tests.
-2. If the pull request adds functionality, the docs should be updated. Put
+1. The merge request should include tests.
+2. If the merge request adds functionality, the docs should be updated. Put
    your new functionality into a function with a docstring, and add the
    feature to the list in README.md.
-3. The pull request should work for Python 3.6, 3.7, 3.8 and 3.9. Check
-   https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/actions
+3. The merge request should work for Python 3.6, 3.7, 3.8 and 3.9. Check
+   {{cookiecutteer.gitlab_urlbase}}/{{ cookiecutter.gitlab_groupname_or_username }}/{{ cookiecutter.project_slug }}/pipelines
    and make sure that the tests pass for all supported Python versions.
 
 ## Tips
@@ -120,4 +120,4 @@ $ git push
 $ git push --tags
 ```
 
-GitHub Actions will then deploy to PyPI if tests pass.
+Gitlab Pipelines will then deploy to target if tests pass.

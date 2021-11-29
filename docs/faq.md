@@ -6,18 +6,6 @@
     - `release.yml`: define release & publish workflow, run on every tag push, create GitHub release,
     publish docs to GitHub Pages and built package to PyPI.
 
-
-???+ Question
-    # Why not travis CI?
-    Travis CI is a great service, however, github actions is super convenient, less configuration
-    , better integration. Less configuration, less error prone.
-
-???+ Question
-    # Why not read the docs?
-    Same reason as above. GitHub Pages is convenient than read the docs, it requires no
-    further configuration, except access token. As to read the docs, you need to
-    write v2 config file, plus several settings on web pages.
-
 ???+ Question
     # Why mkdocs over sphinx?
     reStructured Text and Sphinx is way to tedious, though powerful. With extension,

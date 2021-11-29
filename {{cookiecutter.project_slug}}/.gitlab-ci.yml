@@ -1,0 +1,33 @@
+# Gitlab CI/CD Configuration
+# https://docs.gitlab.com/ee/ci/yaml
+
+
+before_script:
+  - python --version
+  - python -m pip install --upgrade pip
+  - python -m pip install poetry tox
+
+test:primary:
+  stage: test:primary
+  image: python:3.8-slim
+  script: tox -vv -e format, lint, build, py38
+
+test:py39:
+  stage: test:secondary
+  image: python:3.9-slim
+  script: tox -vv -e py39
+
+build:wheels_and_tarball:
+  stage: deploy
+  image: python:3.8-slim
+  script:
+    - poetry version $(poetry version --short)-dev.$GITLAB_CI_RUN_NUMBER
+    - poetry version --short
+    - poetry build
+
+
+build:relase_and_publish:
+  stage: deploy
+  rules: # only on tag v...
+  script:
+    - 

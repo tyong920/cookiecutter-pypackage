@@ -1,12 +1,17 @@
 # Installation
 
 ## Stable release
-
+ZhengRen does not have a Python package warehouse like PyPI yet.
+We do not assume the target you are going to deploy for now.
+But install packages from VCS project urls is a commonly accpeted way.
+- VCS project urls.
+- Local project directories.
+- Local or remote source archives.
 To install {{ cookiecutter.project_name }}, run this command in your
 terminal:
 
 ``` console
-$ pip install {{ cookiecutter.project_slug }}
+$ pip install git+https://... {{ cookiecutter.project_slug }}
 ```
 
 This is the preferred method to install {{ cookiecutter.project_name

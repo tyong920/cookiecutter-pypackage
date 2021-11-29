@@ -1,5 +1,9 @@
 # History
 
+## v1.1.2
+
+* Host your documentation from [GitHub Pages](https://pages.github.com) with zero-config
+
 ## v1.1.1
 
 * Centralize most of the tool configuration in the `setup.cfg` file
